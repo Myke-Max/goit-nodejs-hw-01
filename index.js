@@ -29,24 +29,24 @@ const invokeAction = async ({ action, id, data }) => {
 };
 
 const newData = {
-  name: "Mike Tyson1",
-  email: "MikeTyson@ironMan.com",
-  phone: "(692) 802-2949111",
+  name: " Mango",
+  email: "mango@gmail.com",
+  phone: "322-22-22",
 };
 
-const updateId = "ab607349-4871-42a1-83b7-6cf69c0addcd";
+const updateId = 1;
 
-invokeAction({ action: "getAllContacts" });
-// invokeAction({ action: "getContactById", id: 2 });
-// invokeAction({ action: "addContact", data:newData });
-
-// invokeAction({
-//   action: "updateContactById",
-//   data: newData,
-//   id: updateId,
-// });
+// invokeAction({ action: "getAllContacts" });
+// invokeAction({ action: "getContactById", id: 5 });
+// invokeAction({ action: "addContact", data: newData });
 
 invokeAction({
-  action: "removeContact",
+  action: "updateContactById",
+  data: newData,
   id: updateId,
 });
+
+// invokeAction({
+//   action: "removeContact",
+//   id: 3,
+// });
