@@ -1,5 +1,16 @@
-const fs = require("fs").promises;
 const contactsOperation = require("./contacts");
+const { Command } = require("commander");
+const program = new Command();
+program
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
+
+program.parse(process.argv);
+
+const argv = program.opts();
 
 const invokeAction = async ({ action, id, data }) => {
   switch (action) {
@@ -28,25 +39,4 @@ const invokeAction = async ({ action, id, data }) => {
   }
 };
 
-const newData = {
-  name: " Mango",
-  email: "mango@gmail.com",
-  phone: "322-22-22",
-};
-
-const updateId = 1;
-
-// invokeAction({ action: "getAllContacts" });
-// invokeAction({ action: "getContactById", id: 5 });
-// invokeAction({ action: "addContact", data: newData });
-
-invokeAction({
-  action: "updateContactById",
-  data: newData,
-  id: updateId,
-});
-
-// invokeAction({
-//   action: "removeContact",
-//   id: 3,
-// });
+invokeAction(argv);
