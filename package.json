@@ -1,0 +1,26 @@
+{
+  "name": "goit-nodejs-hw-01",
+  "version": "1.0.0",
+  "description": "home-work-nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myke-Max/goit-nodejs-hw-01.git"
+  },
+  "author": "Mykola Kolesnyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Myke-Max/goit-nodejs-hw-01/issues"
+  },
+  "homepage": "https://github.com/Myke-Max/goit-nodejs-hw-01#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
