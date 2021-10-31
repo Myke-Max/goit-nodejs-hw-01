@@ -39,4 +39,6 @@ const invokeAction = async ({ action, id, data }) => {
   }
 };
 
-invokeAction(argv);
+(async () => {
+  await invokeAction(argv);
+})();
